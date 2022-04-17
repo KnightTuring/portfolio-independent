@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- This will be the main homepage of my personal website -->
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ5F7S8C6L"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LJ5F7S8C6L');
+        </script>
+        <script src="https://kit.fontawesome.com/ba85e666f2.js" crossorigin="anonymous"></script>
+        <!-- 
+            Charset, viewport and other tags
+         -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon_main.png">
+        <!-- 
+            Link to the stylesheet 
+        -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Abdul Wasay</title>
+    </head>
+    <body class="form-body" onload="setDarkModeClasses()">   
+        
+        <header>
+            <div id="main-navbar-div">
+                <button class="dropdown-btn">Menu</button>
+                <nav id="main-navbar">
+                    <a href="index.html">Home</a>
+                    <a href="projectnavigation.html">Projects</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="graphicdesign.html">Illustrations</a>
+                    <a href="resume.html">Resume</a>
+                    <a class = "active-nav" href="form.html">Contact Me</a>
+                </nav>
+            </div>
+            <div class="dark-mode-float-button" id = "btn-dark-mode">Dark mode off</div>
+            <h1 id="main-h1" class = "title">Get in touch with me</h1>
+        </header>
+
+        <form
+        action="https://formspree.io/f/xdobdjry"
+        method="POST">
+            <i class="fa-solid fa-user"></i> <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <i class="fa-solid fa-envelope"></i> <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <i class="fa-solid fa-comment"></i> <label for="comments">Comments</label><br>
+            <input type="text" id="comments" name="comments"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <footer>
+        
+        </footer>
+        <script src="./scripts/darkmode.js"></script>
+    </body>
+</html>

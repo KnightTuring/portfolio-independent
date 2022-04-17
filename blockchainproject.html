@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ5F7S8C6L"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LJ5F7S8C6L');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon_main.png">
+        <!-- Link to the stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Abdul Wasay</title>
+    </head>
+
+    <body onload="setDarkModeClasses()">
+        <header>
+            <div id="main-navbar-div">
+                <button class="dropdown-btn">Menu</button>
+                <nav id="main-navbar">
+                    <a href="index.html">Home</a>
+                    <a class = "active-nav" href="projectnavigation.html">Projects</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="graphicdesign.html">Illustrations</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="form.html">Contact Me</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="dark-mode-float-button" id = "btn-dark-mode">Turn dark mode off</div>
+            <h1>A Blockchain based electronic voting machine for Indian elections</h1>
+
+            <div id="blockchain-project-motivation">
+                <h2>Motivation</h2>
+                <ul>
+                    <li>
+                       <p>The election commission of India talks of existing EVMs as "perfect" and "infallible" however no verifiable arguments supported these claims.</p> 
+                    </li>
+                    <li>
+                        <p>No cryptography systems built into the system, no information available on the security of the local storage of the existing EVMS.</p>
+                    </li>
+                    <li>
+                        <p>Largely manual technique for voter authentication, this gives way to human errors and allows malpractices to seep in, as is evident.</p>
+                    </li>
+                    <li>
+                        <p>India has been  a model country with respect to having a 100% electronic voting process and its high time that these problems be addressed by a new state of the art system.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2>Process</h2>
+                <img src="./images/blockchain_project/processBlockchainVotingDevWhiteBg.png" class="project-blockchain-img" alt="A diagram explaining the flow of the project development. First step is the requirements gathering, then comes the generate objectives part, then the ideation stage, then the prototyping stage and finally the user feedback stage">
+            </div>
+
+            <div id = "blockchain-project-objectives">
+                <h2>Objectives</h2>
+                <ul>
+                    <li>
+                        <p>Data Immutability: The votes once cast, should be immutable i.e there should be no scope of change in the attributes of the vote once it has been cast.</p>
+                    </li>
+                    <li>
+                        <p>Security: The system must be built with iron clad security features.</p>
+                    </li>
+                    <li>
+                        <p>Reliability: The system must be robust enough to continue providing full functionality even in case of anomalies like power failure or network failure.</p>
+                    </li>
+                    <li>
+                        <p>Scalability: The system must be capable enough to handle even national elections that are carried out in a single phase. It must have concurrency control mechanisms to handle large amount of concurrent requests.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="blockchain-project-prototype-overview">
+                <h2>Prototype and related processes-An overview</h2>
+                <p>When we had finalized the architecture of our system at an abstract level it was as depicted by the diagram below. Each EVM (Electronic Voting Machine) would be connected to a blockchain network. 
+                    Every vote that would be cast on an EVM would be first encrypted, then stored locally and would finally be pushed onto the blockchain. 
+                    The presiding officers would be able to monitor the network and would be alerted instantaneously of discrepancies, if any.</p>
+                    <img src="./images/blockchain_project/userarchitecturewhitebg.png" class="project-blockchain-img" alt="A diagram explaining the user architecture of the project. There are 3 blocks, one block is the blockchain diagram, the second block is the managing and monitoring elections one and the thrid block is the encryption algorithms block which the voting unit interacts with.">
+            </div>
+
+            <div>
+                <h2>The Electronic Voting Machine</h2>
+                <img src="./images/blockchain_project/technicalarchitecture-whitebg.png" class="project-blockchain-img" alt="The technical architecture of the project. The hardware is Pi Zerio with network connectivity. The OS is a secure Linux running an authentication system and a blockchain network. The Linux system interacts with the biometric authentication module and the touch based GUI">
+                <p>
+                    The components of our EVM as depicted in the figure were:
+                </p>
+                <ul>
+                    <li>
+                        <p>Biometric authentication: With the advent of the Aadhar identification in India, ensuring that only legitimate citizens are able to vote was quite simple. Every voter would be required to authenticate themselves in order to vote. The fingerprint sensor of our system would be responsible for this. </p>
+                    </li>
+
+                    <li>
+                        <p>Touch-based GUI: We decided to replace the current button-based system with a touchscreen GUI. This had a couple of benefits. The most major being that we no longer relied on the underlying wiring to ensure that each voting button cast a vote to the correct candidate but would instead be dependent on the underlying code. Another positive side effect of this was being able to display the GUI in a particular regional language. </p>
+                    </li>
+
+                    <li>
+                        <p>Authentication System: THis is a back-end system component that would be responsible for all Aadhar related authentication communications. It would be running inside a Linux system.</p>
+                    </li>
+
+                    <li>
+                        <p>Blockchain framework: Once a vote has been casted, the blockchain fraework would be responsible for reflecting that onto the shared ledger. This too would be running inside a Linux system.</p>
+                    </li>
+                    <li>
+                        <p>Hardware: For our prototype, we used a Pi Zero that allowed us to develop this system relatively quickly and cheaply. </p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div>
+                <h2>How would the voting process be?</h2>
+                <p>
+                    <img src="images/blockchain_project/voting_process.PNG" class="project-blockchain-img" alt="A diagram explaining the voting process">
+                </p>
+            </div>
+
+            <div>
+                <h2>Prototype and GUIs</h2>
+                <img src="./images/blockchain_project/all_ok_welcome.png" class="project-blockchain-img" alt="Picture of the voting device showing the welcome screen">
+                <br>
+                <img src="./images/blockchain_project/screen2.png" class="project-blockchain-img" alt="A screen showing 2 buttons: register and start voting">
+                <br>
+                <img src="./images/blockchain_project/screenRegisterPrint.png" class="project-blockchain-img" alt="A screen showing a prompt asking the user to place their finger on the fingerprint scanner">
+                <br>
+                <img src="./images/blockchain_project/candidate_verification_done.png" class="project-blockchain-img" alt="A screen showing that the candidate fingerprint verification has completed successfully.">
+                <br>
+                <img src="./images/blockchain_project/candidate_list.png" class="project-blockchain-img" alt="A screen displaying a list of candidates a voter can vote for">
+            </div>
+
+            <div>
+                <h2>What was my role in the team?</h2>
+                <p>We were a team of 4 people, Each of us were driven and passionate about this project so we hit it off really well.
+                    Blockchain was a foreign concept to us. We were essentially starting from scratch and had 9 months to develop this. Once we had brainstormed and finalized the objectives of our solution, we had to pick a blockchain framework to move forward with. This was a dilemma, so we decided to split into groups of 2, each group would pick a framework and completely understand and implement a smaller version of our prototype in it. Once that was done, we evaluated each of our results to pick the framework that we felt would suit our needs better and went ahead with the rest of the development. I worked with Hyperledger Fabric and was responsible for developing the front-end of the voting unit. Hyperledger Fabric uses Go as its programming language so I had to read up and get familiar with it. The GUIs were written from scratch using plain HTML, CSS, and JS. Bootstrap 4 made it easier to get the content organized. </p>
+            </div>
+        </main>
+
+        <footer class="footer-text">
+            <p>Abdul Wasay &copy; 2022</p>
+        </footer>
+        <script src="./scripts/darkmode.js"></script>
+    </body>
+</html>
+
+
+
+

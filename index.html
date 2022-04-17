@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- This will be the main homepage of my personal website -->
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ5F7S8C6L"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LJ5F7S8C6L');
+        </script>
+        <!-- 
+            Charset, viewport and other tags
+         -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon_main.png">
+        <!-- 
+            Link to the stylesheet 
+        -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Abdul Wasay</title>
+    </head>
+
+    <body onload="setDarkModeClasses()">
+        <header>
+            <div id="main-navbar-div">
+                <button class="dropdown-btn">Menu</button>
+                <nav id="main-navbar">
+                    <a class = "active-nav" href="index.html">Home</a>
+                    <a href="projectnavigation.html">Projects</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="graphicdesign.html">Illustrations</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="form.html">Contact Me</a>
+                </nav>
+            </div>
+            <h1 id="main-h1" class = "title">Hello world!</h1>
+        </header>
+
+        <main>
+            <div class="dark-mode-float-button" id = "btn-dark-mode">Dark mode off</div>
+            <div id = "intro-section">
+                <a href="https://voyager.jpl.nasa.gov/golden-record/golden-record-cover/"><img id = "main-img" src="./images/golden_record.png" alt = "The golden record carried on board the Voyager 1 and 2 spacecraft"></a>
+                
+
+                <div id = "main-intro-div">
+                    <p class="main-intro-text">My name is Abdul Wasay.</p> 
+                    <p class="main-intro-text">I believe in the power of technology to <br><strong class = "main-intro-goal-title">inspire communities,</strong> <br><strong class = "main-intro-goal-title">empower people and</strong> <br><strong class = "main-intro-goal-title">advance humanity.</strong></p> 
+                    <p class="main-intro-text">I've been working towards these goals of mine since my undergraduate days and continue to do so now as a 1st year graduate student at 
+                        the University of Michigan studying Information Science with a focus in Applied Data Science and Social Computing.</p>
+                </div>
+           </div>
+
+            <div id="goal-description">
+                <h2 class="title">What do my goals mean?</h2>
+                <h3 class="goals-title">Empowerment</h3>
+                <p class="goals-explanation"> Technology enables us to move beyond the barriers around us. it enables people around the globe to overcome their socio-economic 
+                    limitations. However, there is still more left to do, more folks to be reached out to and I want to contribute in those efforts (The next billion users).</p>
+                <h3 class="goals-title">Inspire communities</h3>
+                <p class="goals-explanation">
+               When people are empowered they achieve things, when they achieve, they share with their communities be it their friends, their family, or
+                their neighbours. When people see others achieving, they are inspired to do more thus as one grows so does the possibility of their community growing.
+                </p>
+                <h3 class="goals-title">Advance humanity</h3>
+                <p class="goals-explanation">
+                As individuals grow and their communities grow, humanity as a whole progresses. As we move towards our lofty goals of becoming an 
+                inter-planetary spacefaring species, transitioning to cleaner energy sources and developing the next generation of computing technologies it is more than 
+                ever important for us to be united and to move forward as one.
+                </p>                
+            </div>
+        </main>
+        <footer class="footer-text">
+            <p>Abdul Wasay &copy; 2022</p>
+        </footer>
+        <script src="./scripts/darkmode.js"></script>
+    </body>
+   
+</html>

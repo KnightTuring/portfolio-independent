@@ -1,0 +1,394 @@
+main {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-h1 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.title {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.dropdown-btn {
+    display: none;
+}
+
+#main-navbar-div {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#main-navbar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+    #main-img,  #main-img:hover, #intro-section a{
+        display: none;
+    }
+
+    #main-intro-div {
+        text-align: center;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .dropdown-btn {
+        display: block;
+        text-transform: uppercase;
+        border-radius: 20px;
+        border: 2px solid white;
+        padding: 5px;
+        margin: 5px;
+        align-items: center;
+    }
+
+    #main-navbar-div {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #main-navbar {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+
+    #main-navbar a{
+        display: block;
+    }
+
+    #main-navbar-div:hover {
+        display: flex;
+        position: relative;
+        flex-direction: column !important;
+        background-color: whitesmoke;
+    }
+
+    #main-navbar-div:hover #main-navbar{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: whitesmoke;
+    }
+
+    .goals-title {
+        text-align: center !important;
+    }
+}
+
+#main-navbar-div a, button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+#main-navbar-div a:hover, button:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#main-navbar-div a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+#main-navbar-div ul li:hover a{
+    color: whitesmoke;
+}
+
+.main-intro-goal-title {
+    font-size: x-large;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#intro-section {
+    display: grid;
+    grid-template-columns: 3;    
+}
+
+#intro-section a {
+    grid-column: 1 / span 1;
+    justify-self: right;
+    align-self: center;
+}
+
+#main-img {
+    grid-column: 1 / span 1;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    width: 60%;
+    display: block;
+    padding: 5px;
+    animation: imgmove;
+    animation-duration: 4s;
+}
+
+@keyframes imgmove {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main-img {
+        animation: none;
+    }
+
+    #main-img:hover {
+        width: 60%  !important;
+    }
+
+    #about-me-img {
+        animation: none !important;
+    }
+}
+
+#main-img:hover {
+    width: 70%;
+}
+
+#main-intro-div {
+    grid-column: 2 /  span 2;
+}
+
+.active-nav {
+    background-color: black;
+    color: whitesmoke !important;
+}
+
+.main-intro-text {
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.goals-explanation {
+    margin-bottom: 55px;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.goals-title {
+    padding-left: 10px;
+    text-align: left;
+    font-size: x-large;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.goals-title:nth-child(2) {
+    background-color: #1976D2;
+}
+.goals-title:nth-child(4) {
+    background-color: #388E3C;
+}
+.goals-title:nth-child(6) {
+    background-color: #F57C00;
+}
+
+
+.illustration-img {
+    width:70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    /* box-shadow: 5px 5px whitesmoke; */
+    /* Credits: https://css-tricks.com/make-a-smooth-shadow-friend/ */
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.illustration-img:hover {
+    width:75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.design-timeline-heading {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.design-timeline-desc {
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 10px;
+    text-align: justify;
+}
+
+#about-me-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px black;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    /* Credits: https://css-tricks.com/make-a-smooth-shadow-friend/ */
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    animation: imgmove 4s;
+}
+
+.about-me-desc {
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 10px;
+    text-align: justify;
+}
+
+#blockchain-project-motivation {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-blockchain-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+figcaption {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: wavy;
+    font-size: small;
+}
+
+.footer-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-body {
+    background-image: url('/images/bg-img.jpg');
+}
+
+/* Dark mode enhancements follow */
+.dark-mode-float-button {
+    display: flex;
+    position:fixed;
+	width:150px;
+	height:40px;
+	bottom:40px;
+	right:40px;
+	background-color:white;
+	color:black;
+	border-radius:25px;
+	text-align:center;
+    justify-content: center;
+    align-items: center;
+	box-shadow: 2px 2px 3px #999;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.dark-mode-float-button:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #181818;
+        background-image: none !important;
+        color: white;
+    }
+
+    #main-navbar-div a {
+        background-color: #121212;
+        border: 2px solid gray;
+        color: white;
+    }
+
+    #main-navbar-div a:hover, button:hover{
+        background-color: #A9A9A9 !important; 
+        color: white !important;
+    }
+
+    .active-nav {
+        background-color: #A9A9A9 !important;
+    }
+}
+
+/* For dark mode button */
+.body-dark-scheme {
+    background-color: #181818;
+        background-image: none !important;
+        color: white;
+}
+
+.navbar-dark-scheme {
+    background-color: #121212;
+    border: 2px solid gray;
+    color: white !important;
+} 
+
+.hover-dark-scheme {
+    background-color: #A9A9A9 !important; 
+    color: white !important;
+}
+
+.active-nav-dark-scheme {
+    background-color: #A9A9A9 !important;
+}
+
+.hyperlinked-dark-scheme {
+    color: white;
+}
+

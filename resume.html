@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- This page will contain my resume -->
+<html lang="en">
+
+   <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ5F7S8C6L"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LJ5F7S8C6L');
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@300&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon_main.png">
+        <!-- Link to the stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Abdul Wasay</title>
+    </head>
+
+    <body onload="setDarkModeClasses()">
+        <header>
+            <div id="main-navbar-div">
+                <button class="dropdown-btn">Menu</button>
+                <nav id="main-navbar">
+                    <a href="index.html">Home</a>
+                    <a href="projectnavigation.html">Projects</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="graphicdesign.html">Illustrations</a>
+                    <a class = "active-nav" href="resume.html">Resume</a>
+                    <a href="form.html">Contact Me</a>
+                </nav>
+            </div>
+            <h1 id="main-h1" class = "title">Resume</h1>
+        </header>
+
+        <main>
+            <div class="dark-mode-float-button" id = "btn-dark-mode">Dark mode off</div>
+            <p>An older version of my resume.</p>
+        </main>
+        <iframe src="./files/Abdul_Wasay_Resume.pdf" width="100%" height="500px">
+        </iframe>
+        <footer class="footer-text">
+            <p>Abdul Wasay &copy; 2022</p>
+        </footer>
+        <script src="./scripts/darkmode.js"></script>
+    </body>
+</html>
